@@ -15,15 +15,16 @@ namespace HelloAppTestv4
         // Download drivers to your driver folder.
         // Driver version must match your browser version.
         // http://chromedriver.chromium.org/downloads
+        // https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/
 
         private static IWebDriver _driver;
 
         [ClassInitialize]
         public static void Setup(TestContext context)
         {
-            //_driver = new ChromeDriver(DriverDirectory); // fast
-            //_driver = new FirefoxDriver(DriverDirectory);  // slow
-            _driver = new EdgeDriver(DriverDirectory); //  fast
+            _driver = new ChromeDriver(DriverDirectory); // fast
+            //_driver = new FirefoxDriver(DriverDirectory);  
+            //_driver = new EdgeDriver(DriverDirectory); //  fast
             // Driver file must be renamed to MicrosoftWebDriver.exe OR msedgedriver.exe
             // depending on the version of Selenium?
         }
