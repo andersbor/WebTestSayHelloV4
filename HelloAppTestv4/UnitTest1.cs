@@ -22,8 +22,8 @@ namespace HelloAppTestv4
         [ClassInitialize]
         public static void Setup(TestContext context)
         {
-            _driver = new ChromeDriver(DriverDirectory); // fast
-            //_driver = new FirefoxDriver(DriverDirectory);  
+            //_driver = new ChromeDriver(DriverDirectory); // fast
+            _driver = new FirefoxDriver(DriverDirectory);  
             //_driver = new EdgeDriver(DriverDirectory); //  fast
             // Driver file must be renamed to MicrosoftWebDriver.exe OR msedgedriver.exe
             // depending on the version of Selenium?
@@ -57,4 +57,3 @@ namespace HelloAppTestv4
             Assert.AreEqual("Hello Anders", text);
         }
     }
-}
